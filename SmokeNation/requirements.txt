@@ -1,0 +1,17 @@
+apyori==latest
+collections==latest
+folium==0.12.1
+io==latest
+itertools==latest
+konlpy==latest
+koreanize_matplotlib==latest
+matplotlib==3.6.3
+networkx==2.8.8
+numpy==1.24.0
+os==latest
+pandas==1.5.3
+re==latest
+selenium==latest
+time==latest
+urllib==latest
+wordcloud==1.9.2
