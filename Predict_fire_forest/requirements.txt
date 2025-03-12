@@ -1,0 +1,13 @@
+numpy==1.21.0
+pandas==1.3.0
+matplotlib==3.4.3
+seaborn==0.11.2
+koreanize-matplotlib==0.1.1
+tqdm==4.62.3
+collections-extended==2.0.2
+scikit-learn==1.0.2
+xgboost==1.5.0
+lightgbm==3.3.1
+imblearn==0.9.0
+joblib==1.0.1
+datetime==4.3
