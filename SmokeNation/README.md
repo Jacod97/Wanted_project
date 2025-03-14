@@ -1,8 +1,6 @@
 # 연기의 민족 - 청소년 전자담배 구매 경로 분석 및 규제 강화 제안
 
 ## 1. 프로젝트 개요
-### 최종 PPT
-https://www.canva.com/design/DAGacERlqqU/VLw600U8s9SdePvBxtOO1g/edit?utm_content=DAGacERlqqU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 ### 문제 정의
 - 최근 **청소년의 전자담배 사용 증가**가 사회적 이슈가 되고 있음.
 - 공공데이터 및 뉴스 데이터를 활용하여 **청소년 전자담배 구매 경로를 분석하고, 효과적인 규제 방안을 제안하는 것**이 목표.
