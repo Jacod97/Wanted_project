@@ -19,3 +19,9 @@ https://www.canva.com/design/DAGeAZogcqM/tJyiig7AWb-CQtPqSKdN6Q/edit?utm_content
 
 **최종 PPT**
 https://www.canva.com/design/DAGgKGA-E2s/R4eqgf0bRch1crgBsWIsWQ/view?utm_content=DAGgKGA-E2s&utm_campaign=share_your_design&utm_medium=link2&utm_source=shareyourdesignpanel
+
+### [🤖Presentation_Agent](./Presentation_Agent/) - LLM
+**설명**: LangChain을 활용한 발표하는 AI Agent 개발 프로젝트 
+
+**최종 PPT**
+[https://www.canva.com/design/DAGgKGA-E2s/R4eqgf0bRch1crgBsWIsWQ/view?utm_content=DAGgKGA-E2s&utm_campaign=share_your_design&utm_medium=link2&utm_source=shareyourdesignpanel](https://www.canva.com/design/DAGjSIHYGjg/a_gzvo-oylOeVgUW6culTQ/edit?utm_content=DAGjSIHYGjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
