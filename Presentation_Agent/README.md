@@ -17,16 +17,13 @@ Presentation-Agent/
 │   ├── app.py         # 메인 애플리케이션
 │   └── assets/        # 정적 리소스
 ├── fastapi/           # 백엔드 API 서버
+|   ├── core/          # AI 핵심 기능
 │   ├── main.py        # FastAPI 애플리케이션
 │   ├── models.py      # 데이터 모델
 │   ├── routes.py      # API 라우트
 │   ├── utils.py       # 유틸리티 함수
 │   └── prompts/       # AI 프롬프트
-├── data/              # 데이터 저장소
-└── code/              # 개발 코드
-    ├── JK/           # 개발자 JK의 코드
-    ├── JS/           # 개발자 JS의 코드
-    └── data/         # 코드 관련 데이터
+└──  data/              # 데이터 저장소
 ```
 
 ## 설치 및 실행
