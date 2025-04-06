@@ -14,7 +14,7 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 
 ## 🎥 시연 영상
 
-`r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"`
+[![시연 영상](./data/demo.png)](https://youtu.be/sj9HZPMtha8)
 
 ---
 
