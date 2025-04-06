@@ -11,9 +11,13 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 또한, 발표 자료 기반 **실시간 Q&A 챗봇** 기능을 지원하여 발표 도중 질문에도 대응할 수 있습니다.
 
 ---
+
 ## 🎥 시연 영상
 
-r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"
+(예시 경로)  
+`r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"`
+
+※ **GitHub에 업로드 금지! `.gitignore` 설정 필요**
 
 ---
 
@@ -39,10 +43,10 @@ r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"
 
 ## 📈 프로젝트 주요 기능
 
-- **발표 대본 생성**: PDF 문서의 텍스트/이미지 분석 → 페이지별 간결한 발표 대본 자동 생성
-- **음성 변환 (TTS)**: 생성된 대본을 사람처럼 자연스러운 억양으로 변환
-- **실시간 질의응답 챗봇**: 발표 중 예상 질문에 답변 가능한 챗봇 시스템 구축
-- **Streamlit UI**: 파일 업로드, 대본 수정, 음성 청취, 질문 응답 통합 제공
+- **발표 대본 생성**: PDF 문서 분석 → 페이지별 간결한 발표 대본 생성
+- **음성 변환 (TTS)**: 자연스러운 억양으로 텍스트를 음성 변환
+- **실시간 질의응답 챗봇**: 발표 자료 기반 실시간 Q&A 응답
+- **Streamlit UI**: 파일 업로드 → 대본 수정 → 음성 확인 → 질문응답 일괄 제공
 
 ---
 
@@ -61,16 +65,18 @@ r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"
 
 - **PDF 업로드** → 텍스트/이미지 추출 → 대본 생성 → 키워드 강조 → SSML 삽입 → TTS 음성 생성
 - **VectorDB 저장** → 웹 검색 병합 → 실시간 Q&A 챗봇 응답
-- **Streamlit UI**에서 모든 과정을 통합 제공
+- **Streamlit UI**를 통한 통합 제공
 
 ---
 
 ## 🧩 시스템 구조도
 
-r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시스템 구조도.png"
+(예시 경로)  
+`r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시스템 구조도.png"`
+
+※ **GitHub에 업로드 금지! `.gitignore` 설정 필요**
 
 ---
-
 
 ## 📊 프로젝트 결과 및 회고
 
@@ -90,22 +96,7 @@ r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시스템 구조�
 
 ---
 
-## 🌐 프로젝트 실행 방법
-
-1. **백엔드 서버 실행**
-```bash
-cd fastapi
-uvicorn main:app --reload
-```
-
-2. **프론트엔드 실행**
-```bash
-cd streamlit
-streamlit run app.py
-```
-- 환경변수는 .env 파일을 통해 설정합니다. (OPENAI_API_KEY, GOOGLE_CLOUD_API_KEY 필요)
-
-## 프로젝트 구조
+## 📂 프로젝트 구조
 
 ```
 Presentation-Agent/
@@ -113,19 +104,18 @@ Presentation-Agent/
 │   ├── app.py         # 메인 애플리케이션
 │   └── assets/        # 정적 리소스
 ├── fastapi/           # 백엔드 API 서버
+|   ├── core/          # AI 핵심 기능
 │   ├── main.py        # FastAPI 애플리케이션
 │   ├── models.py      # 데이터 모델
 │   ├── routes.py      # API 라우트
 │   ├── utils.py       # 유틸리티 함수
 │   └── prompts/       # AI 프롬프트
-├── data/              # 데이터 저장소
-└── code/              # 개발 코드
-    ├── JK/           # 개발자 JK의 코드
-    ├── JS/           # 개발자 JS의 코드
-    └── data/         # 코드 관련 데이터
+└──  data/              # 데이터 저장소
 ```
 
-## 설치 및 실행
+---
+
+## 🌐 설치 및 실행 방법
 
 ### 요구사항
 - Python 3.8 이상
@@ -151,13 +141,25 @@ Presentation-Agent/
    ```bash
    # 가상환경 생성 (선택사항)
    python -m venv venv
-   
+
    # Windows
    .\venv\Scripts\activate
-   
+
    # Linux/Mac
    source venv/bin/activate
-   
+
    # 필요한 패키지 설치
    pip install -r requirements.txt
+   ```
+
+### 실행 방법
+1. 백엔드 서버 실행:
+   ```bash
+   cd fastapi
+   uvicorn main:app --reload
+   ```
+2. 프론트엔드 실행:
+   ```bash
+   cd streamlit
+   streamlit run app.py
    ```
