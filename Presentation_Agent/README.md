@@ -34,7 +34,6 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 - **대본 자동 생성용 LLM (GPT-4o-mini) 커스텀 적용**
 - **TTS 음성 변환 파이프라인 개발 (Google TTS)**
 - **FastAPI를 통한 백엔드 서버 구축 및 API 개발**
-- **Streamlit을 활용한 웹 UI 개발**
 - **VectorDB (Chroma) 기반 질의응답 챗봇 구현**
 - **키워드 강조(Embedding 기반) 및 SSML 적용으로 자연스러운 발표 억양 구현**
 
