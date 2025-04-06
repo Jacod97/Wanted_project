@@ -14,10 +14,7 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 
 ## 🎥 시연 영상
 
-(예시 경로)  
 `r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시연영상.mp4"`
-
-※ **GitHub에 업로드 금지! `.gitignore` 설정 필요**
 
 ---
 
@@ -71,10 +68,7 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 
 ## 🧩 시스템 구조도
 
-(예시 경로)  
-`r"C:\wanted\Git_project\Wanted_project\Presentation_Agent\data\시스템 구조도.png"`
-
-※ **GitHub에 업로드 금지! `.gitignore` 설정 필요**
+![alt text](<시스템 구조도.png>)
 
 ---
 
