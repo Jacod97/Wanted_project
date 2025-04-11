@@ -13,7 +13,7 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 ---
 
 ## 🎥 시연 영상
-
+<👇클릭하세요👇>
 <a href="https://youtu.be/sj9HZPMtha8" target="_blank">
   <img src="./data/demo.png" width="400" height="400"/>
 </a>
@@ -69,7 +69,7 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 
 ## 🧩 시스템 구조도
 
-![alt text](<시스템 구조도.png>)
+![alt text](</data/시스템 구조도.png>)
 
 ---
 
