@@ -13,7 +13,7 @@ YOLO 객체 감지 모델을 활용해 집, 나무, 사람을 자동 감지하�
 
 ## 🎥 시연 영상 <👇클릭하세요👇>
 <a href="https://youtu.be/xcK26iobhLY" target="_blank">
-  <img src="./demo.gif" width="400" height="400"/>
+  <img src="./demo.gif" width="600" height="300"/>
 </a>
 
 ---
