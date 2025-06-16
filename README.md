@@ -2,11 +2,12 @@
 
 ## 프로젝트 목록
 
-### [🤖Presentation_Agent](./Presentation_Agent/) - LLM
+### [🤖Presentation_Agent] - LLM
 **설명**: LangChain을 활용한 발표하는 AI Agent 개발 프로젝트 
 
-**최종 PPT**
+**최종**
 [CANVA Link](https://www.canva.com/design/DAGjSIHYGjg/a_gzvo-oylOeVgUW6culTQ/edit?utm_content=DAGjSIHYGjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[Repo Link](./Presentation_Agent/)
 
 ### [🖼️HTP_analysis](./HTP_analysis/) - 딥러닝
 **설명**: HTP(집-나무-사람) 검사를 기반으로 심리적 특성을 분석하는 프로젝트  
