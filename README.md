@@ -5,8 +5,8 @@
 ### [🤖Presentation_Agent] - LLM
 **설명**: LangChain을 활용한 발표하는 AI Agent 개발 프로젝트 
 
-**최종**
-[CANVA Link](https://www.canva.com/design/DAGjSIHYGjg/a_gzvo-oylOeVgUW6culTQ/edit?utm_content=DAGjSIHYGjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+**최종**\n
+[CANVA Link](https://www.canva.com/design/DAGjSIHYGjg/a_gzvo-oylOeVgUW6culTQ/edit?utm_content=DAGjSIHYGjg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)\n
 [Repo Link](./Presentation_Agent/)
 
 ### [🖼️HTP_analysis](./HTP_analysis/) - 딥러닝
