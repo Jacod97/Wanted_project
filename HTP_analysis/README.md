@@ -17,7 +17,7 @@ YOLO 객체 감지 모델을 활용하여 그림 내의 집, 나무, 사람을 �
 
 ## 2. 시연 영상 <👇클릭하세요👇>
 <a href="https://youtu.be/xcK26iobhLY" target="_blank">
-  <img src="./demo.gif" width="600" height="300"/>
+  <img src="./asset/demo.gif" width="600" height="300"/>
 </a>
 
 ---
@@ -39,7 +39,7 @@ YOLO 객체 감지 모델을 활용하여 그림 내의 집, 나무, 사람을 �
 - 입력 이미지 업로드 → YOLOv11 객체 감지  
 - 감지 결과를 JSON으로 변환 → 룰 기반 분석 수행  
 - 분석 결과를 LLM에게 전달 → 해석 문장 출력  
-
+![alt text](<./asset/아키텍처.png>)
 ---
 ## 5. 이슈 발생 및 해결 과정
 
