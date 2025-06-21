@@ -58,8 +58,9 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 ---
 ## 5. 이슈 발생 및 해결 과정
 
-### 1. 발표용 시각자료와 장식용 이미지를 어떻게 판별할 것인가?  
-[이슈 해결 링크](https://velog.io/@wotlr6894/%EB%B0%9C%ED%91%9C%EC%9A%A9-%EC%8B%9C%EA%B0%81%EC%9E%90%EB%A3%8C-vs-%EC%9E%A5%EC%8B%9D-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B5%AC%EB%B6%84-%EB%A1%9C%EC%A7%81%EC%9D%98-%ED%95%9C%EA%B3%84%EC%99%80-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84)
+### 1. 발표용 시각자료와 장식용 이미지를 어떻게 판별할 것인가?   
+[이슈 해결 링크](https://velog.io/@wotlr6894/%EB%B0%9C%ED%91%9C%EC%9A%A9-%EC%8B%9C%EA%B0%81%EC%9E%90%EB%A3%8C-vs-%EC%9E%A5%EC%8B%9D-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B5%AC%EB%B6%84-%EB%A1%9C%EC%A7%81%EC%9D%98-%ED%95%9C%EA%B3%84%EC%99%80-%ED%95%B4%EA%B2%B0-%EC%8B%9C%EB%8F%84) 참고  
+
 ---
 
 ## 6. 프로젝트 결과 및 회고
