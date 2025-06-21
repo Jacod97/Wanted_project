@@ -1,32 +1,27 @@
-# DeepPrint
-
-AI 기반 HTP 검사 보조 프로그램
+# AI 기반 HTP 검사 보조 프로그램: DeepPrint(2025.02 ~ 2025.03)  
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![YOLOv11](https://img.shields.io/badge/YOLOv11-black?style=flat-square)
 
 ---
 
-## 🔍 프로젝트 소개
+## 1. 프로젝트 소개
 
 **DeepPrint**는 심리 평가에서 활용되는 HTP(집-나무-사람) 검사 결과를 AI 기반으로 자동 분석하는 보조 프로그램입니다.  
 YOLO 객체 감지 모델을 활용해 집, 나무, 사람을 자동 감지하고, 이를 기반으로 심리적 특성을 평가하여 검사 효율성과 정확성을 향상시키는 것을 목표로 합니다.
 
 ---
 
-## 🎥 시연 영상 <👇클릭하세요👇>
+## 2. 시연 영상 <👇클릭하세요👇>
 <a href="https://youtu.be/xcK26iobhLY" target="_blank">
   <img src="./demo.gif" width="600" height="300"/>
 </a>
 
 ---
 
-## 👥 팀 정보
-
-- **팀 프로젝트** (총 3명)
-- **팀원:** 정재식, 김지민, 박형빈
-- **프로젝트 기간:** 2025.03.10 ~ 2025.04.10
-
----
-
-## 🧑‍💻 나의 역할 (정재식)
+## 3. 수행 역할
 
 - **HTP 검사용 YOLO11 모델 학습 및 최적화**
 - **입력 이미지 크기 및 학습 속도 최적화**
@@ -36,31 +31,15 @@ YOLO 객체 감지 모델을 활용해 집, 나무, 사람을 자동 감지하�
 
 ---
 
-## 📈 프로젝트 주요 기능
-
-- **YOLO 기반 객체 감지**: 집, 나무, 사람 요소를 자동 감지
-- **심리적 해석 자동화**: 감지 결과를 JSON으로 변환 후 심리적 특성 분석
-- **룰 기반 해석 로직**: 감지된 요소의 크기, 위치, 개수에 따른 심리 평가
-- **객체 지향적 코드 구조화**: 클래스 기반 구조로 유지보수성과 확장성 확보
-
----
-
-## 🛠️ 프로젝트 기술 스택
-
-- **AI 모델**: YOLO11
-- **프로그래밍 언어**: Python
-- **라이브러리**: OpenCV, NumPy, Matplotlib, JSON
-- **개발 환경**: Jupyter Notebook
-
----
-
-## 🖥️ 시스템 아키텍처 요약
+## 4. 시스템 아키텍처 요약
 
 - **입력 이미지 업로드** → YOLO11 모델을 통한 객체 감지 →  
 - **감지된 객체 정보(JSON 변환)** → 룰 기반 심리 해석 적용 → 결과 출력
 
 ---
+## 5. 이슈 발생 및 해결 과정
 
+---
 ## 📊 프로젝트 과정
 
 1. **아이디어 도출 및 기획**
@@ -90,7 +69,7 @@ YOLO 객체 감지 모델을 활용해 집, 나무, 사람을 자동 감지하�
    - 자동화된 심리 해석 적용 가능성 검증
 
 ---
-## 📊 프로젝트 결과 및 회고
+## 6. 프로젝트 회고
 
 - **HTP 검사 결과를 자동 감지하고 심리 해석까지 이어지는 프로세스 구축**
 - **YOLO11 모델 최적화로 객체 감지 성능 개선**
