@@ -3,7 +3,6 @@
 ![LangChain](https://img.shields.io/badge/LangChain-000000?style=flat-square&logo=chainlink&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![ChromaDB](https://img.shields.io/badge/ChromaDB-9E00FF?style=flat-square&logo=databricks&logoColor=white)
----
 
 ## 1. 프로젝트 소개
 
