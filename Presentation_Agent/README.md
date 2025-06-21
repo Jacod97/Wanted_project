@@ -1,5 +1,8 @@
 # AI 발표 자동화 시스템: Presentation Agent(2025.03 ~ 2025.04)
-
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-000000?style=flat-square&logo=chainlink&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-9E00FF?style=flat-square&logo=databricks&logoColor=white)
 ---
 
 ## 1. 프로젝트 소개
@@ -44,6 +47,18 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 - `POST /export-presentation`  
   PDF를 PPTX로 변환하고 음성을 삽입해 ZIP 파일로 제공.
 ---
+
+## 🛠️ 프로젝트 기술 스택
+
+- **LLM**: OpenAI GPT-4o-mini
+- **TTS**: Google Text-to-Speech API
+- **Frameworks**: FastAPI (백엔드 서버), Streamlit (웹 UI)
+- **Database**: Chroma VectorDB
+- **검색 엔진**: DuckDuckGo Web Search
+- **기타**: LangChain, OpenAI Embeddings, GitHub
+
+---
+
 ## 🛤️ 프로젝트 과정
 
 1. **아이디어 도출 및 기획**
@@ -100,17 +115,6 @@ PDF 문서로부터 텍스트와 이미지를 추출해 **자동으로 발표 �
 - **음성 변환 (TTS)**: 자연스러운 억양으로 텍스트를 음성 변환
 - **실시간 질의응답 챗봇**: 발표 자료 기반 실시간 Q&A 응답
 - **Streamlit UI**: 파일 업로드 → 대본 수정 → 음성 확인 → 질문응답 일괄 제공
-
----
-
-## 🛠️ 프로젝트 기술 스택
-
-- **LLM**: OpenAI GPT-4o-mini
-- **TTS**: Google Text-to-Speech API
-- **Frameworks**: FastAPI (백엔드 서버), Streamlit (웹 UI)
-- **Database**: Chroma VectorDB
-- **검색 엔진**: DuckDuckGo Web Search
-- **기타**: LangChain, OpenAI Embeddings, GitHub
 
 ---
 
