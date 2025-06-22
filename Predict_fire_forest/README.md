@@ -18,12 +18,22 @@
 
 ## 2. 수행 역할
 
-### 데이터 수집 및 분석   
-산불 발생에 영향을 미치는 데이터 조사
+### 데이터 수집  
+산불 발생에 영향을 미치는 데이터 조사하여 비중이 큰 상위 3개의 원인과 관련된 데이터를 수집하였습니다.
 
 ![alt text](<./asset/산불원인.png>)
 | 산불 원인 유형             | 관련 데이터                            | 데이터 출처 |
 |-----------------------------|------------------------------------------|----------------|
-| 입산자실화 관련 데이터       | 인구 데이터, 토지 데이터(묘지)           | [행정안전부](https://jumin.mois.go.kr), [KOSIS](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26) |
-| 기타 관련 데이터            | 기상 데이터                              | [기상청 AP](https://apihub.kma.go.kr) |
+| 입산자실화 데이터       | 인구 데이터, 토지 데이터(묘지)           | [행정안전부](https://jumin.mois.go.kr), [KOSIS](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26) |
+| 기타 데이터            | 기상 데이터                              | [기상청 AP](https://apihub.kma.go.kr) |
 | 농산부산물 소각 데이터       | 토지 데이터(농지)                        | [KOSIS](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26) |
+
+### 데이터 분석
+
+아래의 그림은 산불 발생 이력 데이터를 Heatmap 형태로 시각화한 결과입니다.  
+연도·월별 및 연도·지역별 산불 발생 패턴을 한눈에 확인할 수 있으며, 특정 시기(봄철) 및 지역(강원, 경북 등)에 집중되는 양상을 보입니다.
+
+![산불 발생 히트맵](./asset/heatmap.png)
+
+- 상단 그래프: 연도-월별 산불 발생 추이  
+- 하단 그래프: 연도-지역(시도)별 산불 발생 분포
