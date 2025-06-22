@@ -1,13 +1,16 @@
-# Predict_fire_forest
-
-AI 기반 산불 발생 예측 시스템
+# 머신러닝 기반 산불 발생 예측 시스템: Predict_fire_forest(2025.01 ~ 2025.02)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
+![GeoPandas](https://img.shields.io/badge/GeoPandas-008000?style=flat-square)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
 
 ---
 
-## 🔍 프로젝트 소개
+## 1. 프로젝트 소개
 
-**Predict_fire_forest**는 머신러닝 모델을 활용해 산불 발생 가능성을 사전에 예측함으로써,  
-재해 예방 및 대응 시스템 개선에 기여하는 것을 목표로 한 프로젝트입니다.  
+**Predict_fire_forest**는 전국 산불 발생 데이터를 기반으로 머신러닝을 활용해 산불 발생 여부를 사전에 예측하여 재해 예방을 위한 모델 개발을 목표로 한 프로젝트입니다.  
 산불은 빠르게 확산되어 막대한 피해를 초래할 수 있으므로, 데이터 기반 예측 시스템 구축을 통해 빠르고 정확한 대응이 가능하도록 지원합니다.
 
 ---
