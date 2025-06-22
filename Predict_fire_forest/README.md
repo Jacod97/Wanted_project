@@ -198,7 +198,7 @@ X_test_scaled = scaler.transform(X_test)
 결과적으로 이러한 오차는 예측 모델의 성능에 부정적인 영향을 줄 수 있었습니다.
 
 ### **향후 개선 계획:**
-현재 데이터의 클래스 불균형 문제를 완화하기 위해, 향후에는 **GAN(Generative Adversarial Network)**을 활용한
+현재 데이터의 클래스 불균형 문제를 완화하기 위해, 향후에는 GAN(Generative Adversarial Network)을 활용한
 데이터 증강 기법을 도입하는 방안을 검토하고 있습니다. 이를 통해 산불 발생과 같은 희귀 사례에 대한 학습 효율을 높일 수 있을 것으로 기대합니다.
 
 또한, Stacking Classifier 기법을 활용하여 예측 성능을 한층 향상시킬 계획입니다.
