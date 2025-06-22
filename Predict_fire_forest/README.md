@@ -20,4 +20,10 @@
 
 ### 데이터 수집 및 분석   
 산불 발생에 영향을 미치는 데이터 조사
+
 ![alt text](<./asset/산불원인.png>)
+| 산불 원인 유형             | 관련 데이터                            | 데이터 출처 |
+|-----------------------------|------------------------------------------|----------------|
+| 입산자실화 관련 데이터       | 인구 데이터, 토지 데이터(묘지)           | 행정안전부([링크](https://jumin.mois.go.kr)), KOSIS([링크](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26)) |
+| 기타 관련 데이터            | 기상 데이터                              | 기상청 API([링크](https://apihub.kma.go.kr)) |
+| 농산부산물 소각 데이터       | 토지 데이터(농지)                        | KOSIS([링크](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26)) |
