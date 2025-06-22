@@ -108,16 +108,59 @@ X_test_scaled = scaler.transform(X_test)
 | `num_leaves` (XGBoost)           | 하나의 트리에서 생성할 수 있는 리프 노드 수. 복잡한 패턴 학습 가능하나 과적합 주의. |
 | `learning_rate` (XGBoost, LGBM)  | 학습률. 낮을수록 학습 속도는 느리지만 성능이 안정적일 수 있음. |
 
-| 모델                  | 하이퍼파라미터        | 값 범위                         |
-|-----------------------|------------------------|---------------------------------|
-| LogisticRegression     | `C`                    | [0.01, 0.1, 1, 10, 100]         |
-| RandomForestClassifier | `n_estimators`         | [100, 300, 500]                 |
-|                        | `max_depth`            | [None, 10, 20, 30]              |
-|                        | `min_samples_leaf`     | [2, 5, 10]                      |
-| XGBClassifier          | `n_estimators`         | [100, 300, 500]                 |
-|                        | `num_leaves`           | [31, 63, 127]                   |
-|                        | `learning_rate`        | [0.01, 0.1, 0.2]                |
-| LGBMClassifier         | `n_estimators`         | [100, 300, 500]                 |
-|                        | `max_depth`            | [None, 10, 20, 30]              |
-|                        | `min_samples_leaf`     | [2, 5, 10]                      |
+<table>
+  <thead>
+    <tr>
+      <th>모델</th>
+      <th>하이퍼파라미터</th>
+      <th>값 범위</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">LogisticRegression</td>
+      <td>C</td>
+      <td>[0.01, 0.1, 1, 10, 100]</td>
+    </tr>
+    <tr>
+      <td rowspan="3">RandomForestClassifier</td>
+      <td>n_estimators</td>
+      <td>[100, 300, 500]</td>
+    </tr>
+    <tr>
+      <td>max_depth</td>
+      <td>[None, 10, 20, 30]</td>
+    </tr>
+    <tr>
+      <td>min_samples_leaf</td>
+      <td>[2, 5, 10]</td>
+    </tr>
+    <tr>
+      <td rowspan="3">XGBClassifier</td>
+      <td>n_estimators</td>
+      <td>[100, 300, 500]</td>
+    </tr>
+    <tr>
+      <td>num_leaves</td>
+      <td>[31, 63, 127]</td>
+    </tr>
+    <tr>
+      <td>learning_rate</td>
+      <td>[0.01, 0.1, 0.2]</td>
+    </tr>
+    <tr>
+      <td rowspan="3">LGBMClassifier</td>
+      <td>n_estimators</td>
+      <td>[100, 300, 500]</td>
+    </tr>
+    <tr>
+      <td>max_depth</td>
+      <td>[None, 10, 20, 30]</td>
+    </tr>
+    <tr>
+      <td>min_samples_leaf</td>
+      <td>[2, 5, 10]</td>
+    </tr>
+  </tbody>
+</table>
 
