@@ -40,10 +40,29 @@
 
 ### 데이터 전처리
 
+데이터 통합
 | 처리 방식 | 적용 설명 |
 |-----------|-----------|
 | merge     | 산불 발생, 인구, 기상, 토지 데이터를 날짜 및 시/군/구 단위로 병합 |
 | groupby   | 통합된 데이터프레임을 **날짜, 시/군/구 단위**로 묶어 통계 분석 수행 (예: 일별 평균, 지역별 합계 등) |
-| map       | **시/군/구의 위·경도**를 기반으로 가장 가까운 **기상 관측소와 연결**하여 날씨 정보 매핑 
+| mapping   | **시/군/구의 위·경도**를 기반으로 가장 가까운 **기상 관측소와 연결**하여 날씨 정보 매핑 
 
+결측치 처리
+| 항목 유형   | 변수명                                   | 처리 기준 |
+|-------------|-------------------------------------------|------------|
+| 강수량       | `rain`                                    | 0으로 대체 |
+| 토지 정보    | `total_area`, `field_area`, `paddy_area`, `cemetery_area` | 동일 지역의 **전년도 값**으로 대체 |
+| 기온 정보    | `tempAvg`, `tempMin`, `tempMax`           | 동일 지역의 **같은 달 평균**으로 대체 |
+| 습도 정보    | `humMin`, `humAvg`                         | 동일 지역의 **같은 달 평균**으로 대체 |
+| 풍속 정보    | `windMax`, `windAvg`                       | 동일 지역의 **같은 달 평균**으로 대체 |
 
+예제 코드
+```python
+weather_columns = ['tempAvg', 'tempMin', 'tempMax', 'windMax', 'windAvg', 'humMin', 'humAvg']
+for col in weather_columns:
+    filled_df[col].fillna(filled_df.groupby(['dateYear', 'dateMonth', 'sgg_nm'])[col].transform('mean'), inplace=True)
+
+area_columns = ['total_area', 'field_area', 'paddy_area', 'cemetery_area']
+for col in area_columns:
+    filled_df[col] = filled_df.groupby('sgg_nm')[col].transform(lambda group: group.ffill().bfill())
+```
