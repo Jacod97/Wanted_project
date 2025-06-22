@@ -66,3 +66,28 @@ area_columns = ['total_area', 'field_area', 'paddy_area', 'cemetery_area']
 for col in area_columns:
     filled_df[col] = filled_df.groupby('sgg_nm')[col].transform(lambda group: group.ffill().bfill())
 ```
+### 피처 엔지니어링
+**클래스 불균형**
+- 산불 발생 데이터는 미발생 데이터에 비해 클래스가 매우 부족하기에 초기에 SMOTE를 활용한 오버샘플링을 적용하였으나
+- 여전히 클래스 부족문제로 인해 TP(산불 발생 예측)에 비해 TN(산불 미발생 예측)이 압도적으로 많이 잡히는 문제가 발생하여
+- 언더샘플링과 오버샘플링을 조합하여 사용
+```python
+smote = SMOTE(sampling_strategy=0.5,random_state=42)
+under = RandomUnderSampler(sampling_strategy=0.5,random_state=42)
+pipeline = Pipeline(steps=[('smote',smote),('under',under)])
+```
+**스캐일링**
+- 인구, 면적 등의 데이터를 밀도로 변환    
+    - ex) 부산 인구 / 전체 인구 = 부산 인구 밀도
+- 스케일 차이 때문에 특정 특성이 모델을 좌지우지하지 않도록 StandardScaler 사용
+```python
+# 인구, 면적 등의 데이터를 밀도로 변환
+data['farm_ratio'] = (data['paddy_area'] + data['field_area']) / data['total_area']
+data['cemetary_ratio'] = data['cemetery_area'] / data['total_area']
+data['population_density'] = data['population'] / data['total_area']
+
+# StandardScaler 사용
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train_resampled)
+X_test_scaled = scaler.transform(X_test)
+```
