@@ -18,7 +18,7 @@
 
 ## 2. 수행 역할
 
-### 데이터 수집  
+### 1) 데이터 수집  
 산불 발생에 영향을 미치는 데이터 조사하여 비중이 큰 상위 3개의 원인과 관련된 데이터를 수집하였습니다.
 
 ![alt text](<./asset/산불원인.png>)
@@ -28,7 +28,7 @@
 | 기타 데이터            | 기상 데이터                              | [기상청 AP](https://apihub.kma.go.kr) |
 | 농산부산물 소각 데이터       | 토지 데이터(농지)                        | [KOSIS](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3F...%3D%26) |
 
-### 데이터 분석
+### 2) 데이터 분석
 
 아래의 그림은 산불 발생 이력 데이터를 Heatmap 형태로 시간·공간적 분포를 직관적으로 보여주는 데 초점을 맞춰 시각화한 결과입니다.  
 연도·월별 및 연도·지역별 산불 발생 패턴을 한눈에 확인할 수 있으며, 특정 시기(봄철) 및 지역(강원, 경북 등)에 집중되는 양상을 보입니다.
@@ -38,7 +38,7 @@
 아래의 바 플롯은 앞서 제시한 히트맵과 **동일한 데이터를 기반으로** 월별 및 지역별 산불 발생 건수를 막대그래프 형태로 시각화한 것입니다. 
 ![barplot](./asset/barplots.png)
 
-### 데이터 전처리
+### 3) 데이터 전처리
 
 데이터 통합
 | 처리 방식 | 적용 설명 |
@@ -66,20 +66,20 @@ area_columns = ['total_area', 'field_area', 'paddy_area', 'cemetery_area']
 for col in area_columns:
     filled_df[col] = filled_df.groupby('sgg_nm')[col].transform(lambda group: group.ffill().bfill())
 ```
-### 피처 엔지니어링
+### 4) 피처 엔지니어링
 **클래스 불균형**
 - 산불 발생 데이터는 미발생 데이터에 비해 클래스가 매우 부족하기에 초기에 SMOTE를 활용한 오버샘플링을 적용하였으나
 - 여전히 클래스 부족문제로 인해 TP(산불 발생 예측)에 비해 TN(산불 미발생 예측)이 압도적으로 많이 잡히는 문제가 발생하여
-- 언더샘플링과 오버샘플링을 조합하여 사용
+- 언더샘플링과 오버샘플링을 조합하여 사용하였습니다.
 ```python
 smote = SMOTE(sampling_strategy=0.5,random_state=42)
 under = RandomUnderSampler(sampling_strategy=0.5,random_state=42)
 pipeline = Pipeline(steps=[('smote',smote),('under',under)])
 ```
 **스캐일링**
-- 인구, 면적 등의 데이터를 밀도로 변환    
+- 인구, 면적 등의 데이터를 밀도로 변환하였습니다.   
     - ex) 부산 인구 / 전체 인구 = 부산 인구 밀도
-- 스케일 차이 때문에 특정 특성이 모델을 좌지우지하지 않도록 StandardScaler 사용
+- 스케일 차이 때문에 특정 특성이 모델을 좌지우지하지 않도록 StandardScaler 사용하였습니다.
 ```python
 # 인구, 면적 등의 데이터를 밀도로 변환
 data['farm_ratio'] = (data['paddy_area'] + data['field_area']) / data['total_area']
@@ -91,3 +91,33 @@ scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train_resampled)
 X_test_scaled = scaler.transform(X_test)
 ```
+### 5) 모델 학습
+
+모델 성능 향상을 위해 LogisticRegression, RandomForest, XGBoost, LGBMClassifier에 대해 GridSearchCV 기반의 하이퍼파라미터 튜닝을 수행하였습니다.    
+모델별 주요 하이퍼파라미터를 설정하고, 각 파라미터에 대해 다양한 값을 실험하여 최적의 조합을 탐색하였습니다.
+
+첫 번째 표는 하이퍼파라미터의 의미와 역할을 설명하며,  
+두 번째 표는 각 모델별로 실제 실험에 사용된 파라미터의 탐색 범위를 정리한 것입니다.
+
+| 하이퍼파라미터       | 설명 |
+|----------------------|------|
+| `C` (LogisticRegression)         | 규제 강도. 값이 작을수록 규제가 강해져 모델이 단순해짐 (과적합 방지 목적). |
+| `n_estimators` (Tree 계열)       | 생성할 트리(또는 부스팅 반복)의 개수. 많을수록 성능 향상 가능하나 학습 시간 증가. |
+| `max_depth` (Tree 계열)          | 트리의 최대 깊이. 깊을수록 복잡한 패턴을 학습하지만 과적합 위험 증가. |
+| `min_samples_leaf` (Tree 계열)   | 리프 노드에 있어야 하는 최소 샘플 수. 과적합 방지를 위해 사용. |
+| `num_leaves` (XGBoost)           | 하나의 트리에서 생성할 수 있는 리프 노드 수. 복잡한 패턴 학습 가능하나 과적합 주의. |
+| `learning_rate` (XGBoost, LGBM)  | 학습률. 낮을수록 학습 속도는 느리지만 성능이 안정적일 수 있음. |
+
+| 모델                  | 하이퍼파라미터        | 값 범위                         |
+|-----------------------|------------------------|---------------------------------|
+| LogisticRegression     | `C`                    | [0.01, 0.1, 1, 10, 100]         |
+| RandomForestClassifier | `n_estimators`         | [100, 300, 500]                 |
+|                        | `max_depth`            | [None, 10, 20, 30]              |
+|                        | `min_samples_leaf`     | [2, 5, 10]                      |
+| XGBClassifier          | `n_estimators`         | [100, 300, 500]                 |
+|                        | `num_leaves`           | [31, 63, 127]                   |
+|                        | `learning_rate`        | [0.01, 0.1, 0.2]                |
+| LGBMClassifier         | `n_estimators`         | [100, 300, 500]                 |
+|                        | `max_depth`            | [None, 10, 20, 30]              |
+|                        | `min_samples_leaf`     | [2, 5, 10]                      |
+
