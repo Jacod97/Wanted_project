@@ -76,7 +76,7 @@ data/
 ## 6. 이슈 발생 및 해결 과정
 
 ### 1. Rule기반 채점 방식
-
+[자세히 보기](https://velog.io/@wotlr6894/Rule%EA%B8%B0%EB%B0%98-%EC%B1%84%EC%A0%90-%EB%B0%A9%EC%8B%9D) 
 ### 2. Object Detection 성능 개선을 위한 노력
 
 ---
