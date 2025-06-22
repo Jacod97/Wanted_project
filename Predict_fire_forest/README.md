@@ -1,4 +1,4 @@
-# 머신러닝 기반 산불 발생 예측 시스템: Predict_fire_forest(2025.01 ~ 2025.02)
+# ML기반 산불 발생 예측 시스템: Predict_fire_forest(2025.01 ~ 2025.02)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
