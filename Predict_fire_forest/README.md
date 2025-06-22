@@ -187,6 +187,9 @@ X_test_scaled = scaler.transform(X_test)
 
 ## 3. 이슈발생 및 해결과정
 
+### 1. 클래스 불균형 문제 해소
+[자세히 보기](https://velog.io/@wotlr6894/%ED%81%B4%EB%9E%98%EC%8A%A4-%EB%B6%88%EA%B7%A0%ED%98%95-%EB%AC%B8%EC%A0%9C) 
+
 ## 4. 프로젝트 회고
 
 ### **한계점:**    
