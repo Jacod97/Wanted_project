@@ -166,10 +166,12 @@ X_test_scaled = scaler.transform(X_test)
 
 ### 6) 모델 평가
 초기에는 이진 분류 모델의 성능을 평가할 때 주로 사용되는 `ROC-AUC`를 사용하였지만 TP(산불 발생 예측)에 비해 TN(산불 미발생 예측)이 많이 잡혀 `ROC-AUC`가 과대 평가되었고 지표를 신뢰할 수 없게 되어
-클래스가 불균형할 때 사용하는 `PR-AUC`를 지표로 평가하였습니다. 그러나 프로젝트 기간의 부족으로 인해 `PR-AUC` 성능을 끌어올리는데 실패하였습니다.    
-**각 모델별 Confusion matrix**
-![혼합행렬](<./asset/confusion.png>)
-** 각 모델별 성능**
+클래스가 불균형할 때 사용하는 `PR-AUC`를 지표로 평가하였습니다. 그러나 프로젝트 기간의 부족으로 인해 `PR-AUC` 성능을 끌어올리는데 실패하였습니다.      
+
+#### **각 모델별 Confusion matrix**
+![혼합행렬](<./asset/confusion.png>)    
+
+#### **각 모델별 성능**
 | 모델                  | Accuracy | ROC-AUC | Precision | Recall | PR-AUC |
 |-----------------------|----------|---------|-----------|--------|--------|
 | LogisticRegression     | 0.72     | 0.83    | 0.02      | 0.78   | 0.04   |
@@ -177,8 +179,8 @@ X_test_scaled = scaler.transform(X_test)
 | XGBClassifier          | 0.99     | 0.81    | 0.11      | 0.01   | 0.04   |
 | LGBMClassifier         | 0.99     | 0.82    | 0.03      | 0.002  | 0.04   |
 
-**ROC-AUC**
+#### **ROC-AUC**
 ![ROC](<./asset/ROC.png>)
 
-**PR-AUC**
+#### **PR-AUC**
 ![PR](<./asset/PR.png>)
